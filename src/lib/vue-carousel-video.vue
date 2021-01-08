@@ -68,6 +68,7 @@
         this.scale -= 0.2
         if (this.scale < 0.1) {
           this.scale = 0.1
+          return false
         }
         this.initImgStyle()
       },
