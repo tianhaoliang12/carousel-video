@@ -7,17 +7,17 @@
           <video v-else controls="true" autoplay="autoplay" name="media"><source :src="item.src" type="video/mp4"></video>
         </li>
       </ul>
-      <div class="vcv-carousel__up" @click="up"></div>
-      <div class="vcv-carousel__next" @click="next"></div>
-      <div class="vcv-carousel__close" @click="close"></div>
+      <div class="vcv-carousel__up" @click="up"><img src="./assets/carousel_left.png" alt=""></div>
+      <div class="vcv-carousel__next" @click="next"><img src="./assets/carousel_right.png" alt=""></div>
+      <div class="vcv-carousel__close" @click="close"><img src="./assets/carousel_close.png" alt=""></div>
     </div>
     
     <div class="vcv-carousel__tool_box">
-      <div v-show="toolSwitch" @click="enlarge" class="vcv-carousel__tool1"></div>
-      <div v-show="toolSwitch" @click="narrow" class="vcv-carousel__tool2"></div>
+      <div v-show="toolSwitch" @click="enlarge" class="vcv-carousel__tool1"><img src="./assets/carousel_icon1.png" alt=""></div>
+      <div v-show="toolSwitch" @click="narrow" class="vcv-carousel__tool2"><img src="./assets/carousel_icon2.png" alt=""></div>
       <span>{{beginValue+1}}/{{slideData.length}}</span>
-      <div v-show="toolSwitch" @click="leftRotate" class="vcv-carousel__tool3"></div>
-      <div v-show="toolSwitch" @click="rightRotate" class="vcv-carousel__tool4"></div>
+      <div v-show="toolSwitch" @click="leftRotate" class="vcv-carousel__tool3"><img src="./assets/carousel_icon3.png" alt=""></div>
+      <div v-show="toolSwitch" @click="rightRotate" class="vcv-carousel__tool4"><img src="./assets/carousel_icon4.png" alt=""></div>
     </div>
   </div>
 </template>
@@ -183,18 +183,14 @@
   .vcv-carousel  .vcv-carousel__slide li video{ position: relative; margin: 0 auto; width: 80%; height: auto;}
 
   .vcv-carousel  .vcv-carousel__up,.vcv-carousel__next{position: absolute; left:0; top: 50%; margin-top: -32px; cursor: pointer;  width:44px; height: 44px; border-radius: 50%; }
-  .vcv-carousel  .vcv-carousel__up{ left: 40px; background: url("./assets/carousel_left.png"); background-size: 100% 100%;}
-  .vcv-carousel  .vcv-carousel__next{ left: auto; right:40px; background: url("./assets/carousel_right.png"); background-size: 100% 100%;}
-  .vcv-carousel  .vcv-carousel__close{ position: absolute; top: 40px; right: 48px; width: 32px; height: 32px; cursor: pointer; border-radius: 50%; background: url("./assets/carousel_close.png"); background-size: 100% 100%;}
+  .vcv-carousel  .vcv-carousel__up{ left: 40px;}
+  .vcv-carousel  .vcv-carousel__next{ left: auto; right:40px;}
+  .vcv-carousel  .vcv-carousel__close{ position: absolute; top: 40px; right: 48px; width: 32px; height: 32px; cursor: pointer; border-radius: 50%;}
   .vcv-carousel  .vcv-carousel__up:hover{background-color: rgba(0,0,0,.3)}
   .vcv-carousel  .vcv-carousel__next:hover{background-color: rgba(0,0,0,.3)}
   .vcv-carousel  .vcv-carousel__close:hover{background-color: rgba(0,0,0,.3)}
 
   .vcv-carousel  .vcv-carousel__tool_box{ position: absolute; z-index: 99999; display: flex; justify-content: space-around; align-items: center; left: 50%; bottom: 30px; margin-left: -141px; width: 282px; height: 44px; border-radius: 22px; background: rgba(0,0,0,0.45);}
   .vcv-carousel  .vcv-carousel__tool_box div{ width: 21px; height: 21px; cursor: pointer;}
-  .vcv-carousel  .vcv-carousel__tool_box div.vcv-carousel__tool1{ background: url("./assets/carousel_icon1.png"); background-size: 100% 100%;}
-  .vcv-carousel  .vcv-carousel__tool_box div.vcv-carousel__tool2{ background: url("./assets/carousel_icon2.png"); background-size: 100% 100%;}
-  .vcv-carousel  .vcv-carousel__tool_box div.vcv-carousel__tool3{ background: url("./assets/carousel_icon3.png"); background-size: 100% 100%;}
-  .vcv-carousel  .vcv-carousel__tool_box div.vcv-carousel__tool4{ background: url("./assets/carousel_icon4.png"); background-size: 100% 100%;}
   .vcv-carousel  .vcv-carousel__tool_box span{ font-size: 14px; color: #fff;}
 </style>
