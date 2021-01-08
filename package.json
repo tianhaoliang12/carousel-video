@@ -1,7 +1,7 @@
 {
   "name": "carousel-video",
   "description": "点击查看大图，包括图片放大、缩小、旋转、拖拽，支持视频",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "author": "tianhaoliang",
   "license": "MIT",
   "private": false,
