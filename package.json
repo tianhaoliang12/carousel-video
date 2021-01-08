@@ -1,11 +1,14 @@
 {
   "name": "carousel-video",
   "description": "点击查看大图，包括图片放大、缩小、旋转、拖拽，支持视频",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "tianhaoliang",
   "license": "MIT",
   "private": false,
   "main": "dist/vue-carousel-video.js",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/tianhaoliang12/carousel-video"
